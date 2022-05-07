@@ -1,0 +1,13 @@
+Package: charcoal
+Type: Package
+Title: Sparse change detection in high-dimensional regression
+Version: 0.11
+Date: 2022-05-07
+Authors@R: c(person("Fengnan", "Gao", email = "fngao@fudan.edu.cn",
+                  role = c("aut", "cre")),
+            person("Tengyao", "Wang", email="t.wang59@lse.ac.uk", role=c("aut")))
+Imports: glmnet
+Description: Sparse change localization of high-dimensional linear regression coefficients
+License: `use_gpl3_license()`
+Encoding: UTF-8
+RoxygenNote: 7.1.2

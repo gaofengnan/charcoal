@@ -27,7 +27,7 @@ In the `./matlab/` folder
 ## Data
 
 * `CD4_TREG_in_thymus.csv`: preprocessed data for the real data example in Section 5 of Gao and Wang (2020). 
---->
+-->
 
 # Reference
-Gao, F. and Wang, T. (2022) Sparse Changepoint detection in High-dimensional Linear Regression. Work-in-progress.
+Gao, F. and Wang, T. (2022) Sparse changepoint detection in high-dimensional linear regression. Work-in-progress.

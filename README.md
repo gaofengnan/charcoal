@@ -2,9 +2,9 @@
 
 Implementation of the changepoint localization method via the complementary sketching algorithm for high-dimensional regression coefficients. 
 
-# Description of files
+## Description of files
 
-## R package
+### R package
 
 In `./R/` and `./man/` folders. Can be installed via `devtools::install_github('gaofengnan/charcoal')` in `R`.
 
@@ -29,5 +29,6 @@ In the `./matlab/` folder
 * `CD4_TREG_in_thymus.csv`: preprocessed data for the real data example in Section 5 of Gao and Wang (2020). 
 -->
 
-# Reference
+## Reference
+
 Gao, F. and Wang, T. (2022) Sparse changepoint detection in high-dimensional linear regression. Work-in-progress.

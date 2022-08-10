@@ -2,7 +2,7 @@ Package: charcoal
 Type: Package
 Title: Sparse change detection in high-dimensional regression
 Version: 0.11
-Date: 2022-05-07
+Date: 2022-08-10
 Authors@R: c(person("Fengnan", "Gao", email = "fngao@fudan.edu.cn",
                   role = c("aut", "cre")),
             person("Tengyao", "Wang", email="t.wang59@lse.ac.uk", role=c("aut")))

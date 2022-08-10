@@ -252,6 +252,9 @@ getThreshold <- function(n, p, burnIn=0, alpha=0.05, permSize=1000, sigma=1,
 #' @param X design matrix of the linear regression model
 #' @param Y response vector of the linear regression model
 #' @param sigma noise standard deviation of the regression models; if unknown, set to NULL.
+#' @param no_intervals number of intervals for the narrowest-over-threshold part
+#' @param seed the random seed for the ensuing random interval generation for the narrowest-over-threshold. The default is NULL, where no seed is set.
+#' @param zeta the threshold for the narrowest-over-threshold, and the critical value in the testing refinement stage
 #' @param cpreg_method specifies which variant of the algorithms to be applied in the refinement stage. Set it to 'compsket' for Algorithm 1, to 'proj' for Algorithm 2, and to 'lasso_bic' for Algorithm 3. The default is 'lasso_bic'.
 #' @param burnIn the burnIn parameter to be passed to cpreg, which specifies the fraction at both ends of the interval to be discarded as possbile changes, to handle common boundary effects.
 #' @return a list containing the changepoint estimates, the estimates before testing refinement, the estimates after the midpoint refinement and the estimates after the final refinement.
@@ -281,20 +284,19 @@ getThreshold <- function(n, p, burnIn=0, alpha=0.05, permSize=1000, sigma=1,
 #' X <- rbind(X1,X2)
 #' Y <- rbind(y1,y2)
 #' # test for difference in beta1 and beta2
-#' result <- cpreg(X,Y)
-#' # or  result <- cpreg(X,Y) 
+#' result <- not_cpreg(X,Y, zeta=10)
+#' # or  result <- cpreg(X,Y,zeta=NULL,no_intervals=200,burnIn=0.05,cpreg_method='proj') 
 not_cpreg <- function(X, Y, zeta=NULL,
-                      no_intervals = floor(nrow(X)/5), burnIn=0, sigma=NULL,
-                      verbose=FALSE, cpreg_method='lasso_bic', seed=NULL) {
-  # zeta --- threshold for narrowest-over-threshold
-
+                      no_intervals = floor(nrow(X)/5), burnIn=0, sigma=NULL, 
+                      cpreg_method='lasso_bic', seed=NULL) {
+  verbose <- FALSE
   n <- nrow(X); p <- ncol(X)
   if (is.null(sigma)) {
     ret <- cpreg(X, Y)
     sigma <- mad(ret$Q)
-  }
-  if (is.null(zeta)) zeta <- getThreshold(n, p, burnIn, alpha=0.05/n,
-                                          1000, sigma = sigma, verbose=verbose)
+  } 
+  if (is.null(zeta)) zeta <- getThreshold(n, p, burnIn, alpha=0.01/no_intervals,
+                                          1000, sigma = sigma)
   if (!is.null(seed)) set.seed(seed)
 
   # get intervals, left open, right closed intervals

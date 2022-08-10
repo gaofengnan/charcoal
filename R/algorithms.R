@@ -146,7 +146,7 @@ dicker_noise_sd <- function(W, z)
 #' Y <- rbind(y1,y2)
 #' # test for difference in beta1 and beta2
 #' result <- cpreg(X,Y)
-#' # or  result <- cpreg(X,Y) 
+#' # or  result <- cpreg(X,Y,burnIn=0.05,aggregate_method='lasso_bic') 
 cpreg <- function(X, Y, lambda=NA, sigma=NULL, burnIn=0, aggregate_method='proj')
 {
   n <- dim(X)[1]; p <- dim(X)[2]; m <- n - p

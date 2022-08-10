@@ -1,6 +1,6 @@
 # charcoal
 
-Implementation of the changepoint localization method via the complementary sketching algorithm for high-dimensional regression coefficients. 
+Implementation of the changepoint localization methods via the complementary sketching algorithm for high-dimensional regression coefficients, including Algorithms 1, 2 and 3 from [1].
 
 ## Description of files
 
@@ -31,4 +31,4 @@ In the `./matlab/` folder
 
 ## Reference
 
-Gao, F. and Wang, T. (2022) Sparse changepoint detection in high-dimensional linear regression. 
+1. Gao, F. and Wang, T. (2022) Sparse changepoint detection in high-dimensional linear regression. 

@@ -31,4 +31,4 @@ In the `./matlab/` folder
 
 ## Reference
 
-Gao, F. and Wang, T. (2022) Sparse changepoint detection in high-dimensional linear regression. Work-in-progress.
+Gao, F. and Wang, T. (2022) Sparse changepoint detection in high-dimensional linear regression. 

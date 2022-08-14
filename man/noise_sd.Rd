@@ -15,5 +15,5 @@ noise_sd(W, z)
 a nonnegative scalar of estimated noise standard deviation
 }
 \description{
-Assume data are generated from the model z = W beta + e, where e has independent components N(0, sigma^2), we estimate sigma^2 by fitting a cross-validated Lasso estimator of beta and then estimate sigma from the residual sum of squares.
+Assume data are generated from the model z = W b + e, where e has independent components N(0, s^2), we estimate s^2 by fitting a cross-validated Lasso estimator of b and then estimate sigma from the residual sum of squares.
 }

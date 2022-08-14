@@ -1,6 +1,10 @@
-# charcoal
+# charcoal - A novel methodology of changepoint localization in high-dimensional linear regression
 
-Implementation of the changepoint localization methods via the complementary sketching algorithm for high-dimensional regression coefficients, including Algorithms 1, 2 and 3 from [1].
+(By [Fengnan Gao](https:://gaofn.xyz "Fengnan's Homepage") and [Tengyao Wang](https://personal.lse.ac.uk/wangt60/ "Tengyao's Homepage"))
+
+Implementation of the changepoint localization methods via the complementary sketching algorithm (collectively named 'charcoal') for high-dimensional regression coefficients, where the regression coefficients need not be individually sparse.
+
+Including Algorithms 1, 2, 3, 4 from [1].  A function to generate linear regression samples with (multiple) changepoint is also provided.
 
 ## Description of files
 
@@ -10,4 +14,4 @@ In `./R/` and `./man/` folders. Can be installed via `devtools::install_github('
 
 ## Reference
 
-1. Gao, F. and Wang, T. (2022) Sparse changepoint detection in high-dimensional linear regression. 
+[1] Gao, F. and Wang, T. (2022) Sparse changepoint detection in high-dimensional linear regression.

@@ -43,8 +43,9 @@ orthogonalProjection <- function(X){
 #' Generate a sequential linear regression sample with a single changepoint or 
 #' multiple changepoints
 #' @param n the total number of data points
-#' @param tau a number (in case of single changepoint) or vector containing all changepoints in fraction. If tau = c(0.1,0.2), the changes takes place at 0.1n 
-#' and 0.2n
+#' @param tau a number (in case of single changepoint) or vector containing all
+#' changepoints in fraction. If tau = c(0.1,0.2), the changes takes place at 
+#' 0.1n and 0.2n
 #' @param k a vector containing the sparsity of each vector of change, if k is 
 #' of length 1, then the same sparsity is applied to all change vectors. E.g., 
 #' k = c(3,5), the first change vector is 3-sparse and the second 5-sparse
@@ -375,7 +376,6 @@ cpreg <- function(X, Y, lambda=NA, sigma=NULL, burnIn=0,
 
  
 #' Main function implementing the charcoal algorithm for multiple changepoints
-
 #' @param X design matrix of the linear regression model
 #' @param Y response vector of the linear regression model
 #' @param sigma noise standard deviation of the regression models (must be 
@@ -419,8 +419,8 @@ cpreg <- function(X, Y, lambda=NA, sigma=NULL, burnIn=0,
 #' n <- 240 # total sample size
 #' tau <- c(0.3,0.55)  # changepoint location
 #' p <- 80 # dimension of covariates
-#' k <- c(3,10) # sparsity of the difference vector of the regression 
-#' coefficients o
+#' k <- c(3,10) # sparsity of the vector of difference of the regression 
+#' coefficients
 #' rho <- 1.5 # difference in l_2 norm of the two regression coefficients
 #' # generate the design matrix and response vector of the linear regression 
 #' sample with multiple changepoints

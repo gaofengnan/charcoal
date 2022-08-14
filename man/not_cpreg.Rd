@@ -66,8 +66,8 @@ Gao and Wang (2022).
 n <- 240 # total sample size
 tau <- c(0.3,0.55)  # changepoint location
 p <- 80 # dimension of covariates
-k <- c(3,10) # sparsity of the difference vector of the regression 
-coefficients o
+k <- c(3,10) # sparsity of the vector of difference of the regression 
+coefficients
 rho <- 1.5 # difference in l_2 norm of the two regression coefficients
 # generate the design matrix and response vector of the linear regression 
 sample with multiple changepoints

@@ -20,8 +20,9 @@ simulateMultiCP(
 \arguments{
 \item{n}{the total number of data points}
 
-\item{tau}{a number (in case of single changepoint) or vector containing all changepoints in fraction. If tau = c(0.1,0.2), the changes takes place at 0.1n 
-and 0.2n}
+\item{tau}{a number (in case of single changepoint) or vector containing all
+changepoints in fraction. If tau = c(0.1,0.2), the changes takes place at 
+0.1n and 0.2n}
 
 \item{k}{a vector containing the sparsity of each vector of change, if k is 
 of length 1, then the same sparsity is applied to all change vectors. E.g., 

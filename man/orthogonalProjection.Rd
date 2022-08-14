@@ -2,7 +2,8 @@
 % Please edit documentation in R/algorithms.R
 \name{orthogonalProjection}
 \alias{orthogonalProjection}
-\title{Computing the orthogonal matrix spanning the orthogonal complement of the range of X}
+\title{Computing the orthogonal matrix spanning the orthogonal complement of the 
+range of X}
 \usage{
 orthogonalProjection(X)
 }

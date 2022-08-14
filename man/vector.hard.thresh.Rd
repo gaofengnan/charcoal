@@ -15,5 +15,6 @@ vector.hard.thresh(x, lambda)
 a vector of the same length
 }
 \description{
-entries of v that are below lambda are set to 0. From github.com/wangtengyao/putils.
+entries of v that are below lambda are set to 0. 
+From github.com/wangtengyao/putils.
 }

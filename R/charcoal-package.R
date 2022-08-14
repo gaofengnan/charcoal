@@ -1,8 +1,8 @@
-#' charcoal: A package for changepoint localization in high-dimensional linear regression
-#'
+#' charcoal: A package for changepoint localization in high-dimensional linear 
+#' regression
 #' The charcoal package collects the implementation for the novel methodology
 #' 'charcoal' for changepoint localization in high-dimensional linear
-#' regression, introduced in (Gao and Wang 2022).
+#' regression, introduced in Gao and Wang (2022).
 #'
 #' @docType package
 #' @name charcoal

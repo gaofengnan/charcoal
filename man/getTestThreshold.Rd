@@ -2,7 +2,8 @@
 % Please edit documentation in R/algorithms.R
 \name{getTestThreshold}
 \alias{getTestThreshold}
-\title{Generate the threshold for Algorithm 3 in Gao and Wang (2022)}
+\title{Generate the threshold for Algorithm 4 (and possibly testing) in 
+Gao and Wang (2022)}
 \usage{
 getTestThreshold(
   n,
@@ -22,17 +23,25 @@ getTestThreshold(
 
 \item{burnIn}{the burnIn parameter to be passed the cpreg function}
 
-\item{alpha}{the critical type-I error probablity threshold, should in practice adjusted for the multiple testing, i.e., in this case the number of intervals}
+\item{alpha}{the critical type-I error probability threshold, should in 
+practice adjusted for the multiple testing, i.e., in this case the number 
+of intervals}
 
 \item{sigma}{the standard deviation of the noise in the regressions}
 
-\item{b}{the standard deviation of each entry of the randomly generated regression coefficients, which follows N(0,b^2)}
+\item{b}{the standard deviation of each entry of the randomly generated 
+regression coefficients, which follows N(0,b^2)}
 
-\item{verbose}{whether to output intermidate results/progress bar in the console}
+\item{verbose}{whether to output intermediate results/progress bar in the 
+console}
 }
 \value{
 a nonnegative scalar as the threshold for not_cpreg
 }
 \description{
-Generate the threshold for combining charcoal with the narrowest-over-threshold algorithm, which is also used as the critical threshold in the testing refining stage in not_cpreg.  It works by generating permSize Monte Carlo repetitions of running cpreg on the null model without any change in regression coefficients
+Generate the threshold for combining charcoal with the 
+narrowest-over-threshold algorithm, which is also used as the critical 
+threshold in the testing refining stage in not_cpreg.  It works by generating
+ permSize Monte Carlo repetitions of running cpreg on the null model without 
+ any change in regression coefficients
 }

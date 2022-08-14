@@ -2,8 +2,7 @@
 % Please edit documentation in R/algorithms.R
 \name{cpreg}
 \alias{cpreg}
-\title{Main function implementing the charcoal algorithms for single changepoint
-in Gao and Wang (2022), including Algorithms 1, 2 and 3}
+\title{Main function implementing the charcoal algorithms for single changepoint}
 \usage{
 cpreg(
   X,
@@ -20,21 +19,32 @@ cpreg(
 
 \item{Y}{response vector of the linear regression model}
 
-\item{lambda}{threshold for Algorithms 1 and 2, set it to NULL and the recommended value is applied}
+\item{lambda}{threshold for Algorithms 1 and 2, set it to NULL and the 
+recommended value is applied}
 
-\item{sigma}{noise standard deviation of the regression models; if unknown, set to NULL.}
+\item{sigma}{noise standard deviation of the regression models; if unknown, 
+set to NULL.}
 
-\item{burnIn}{specifies the fraction at both ends of the interval to be discarded as possible changes, to handle common boundary effects}
+\item{burnIn}{specifies the fraction at both ends of the interval to be 
+discarded as possible changes, to handle common boundary effects}
 
-\item{aggregate_method}{specifies which variant of the algorithms to be applied. Set it to 'compsket' for Algorithm 1, to 'proj' for Algorithm 2, and to 'lasso_bic' for Algorithm 3.}
+\item{aggregate_method}{specifies which variant of the algorithms to be 
+applied. Set it to 'compsket' for Algorithm 1, to 'proj' for Algorithm 2, 
+and to 'lasso_bic' for Algorithm 3.}
 
-\item{verbose}{whether to output intermidate results/progress bar in the console}
+\item{verbose}{whether to output intermidate results/progress bar in the 
+console}
 }
 \value{
 a list containing the test statistics and changepoint estimate.
 }
 \description{
-From the model y_t = x_t beta_1 + eps_t for 1<=t<=z and y_t = x_t beta_2 + eps_t for z+1<=t<=n, where x_t are p-dimensional design vectors for 1<=t<=n, we estimate the changepoint z where the change of regression coefficient takes place. The localization is performed using the charcoal algorithms from Gao and Wang (2022).
+From the model y_t = x_t beta_1 + eps_t for 1<=t<=z and 
+y_t = x_t beta_2 + eps_t for z+1<=t<=n, where x_t are p-dimensional design 
+vectors for 1<=t<=n, we estimate the changepoint z where the change of 
+regression coefficient takes place. The localization is performed using the 
+charcoal algorithms from Gao and Wang (2022). The implementation includes
+Algorithms 1, 2 and 3.
 }
 \examples{
 # problem parameters
@@ -65,5 +75,6 @@ result <- cpreg(X,Y)
 ret <- simulateMultiCP(n,z/n,p,k,rho,sigma=1); X <- ret$X; Y <- ret$Y
 }
 \references{
-Gao, F. and Wang, T. (2022) Sparse change detection in high-dimensional linear regression.
+Gao, F. and Wang, T. (2022) Sparse change detection in 
+high-dimensional linear regression.
 }

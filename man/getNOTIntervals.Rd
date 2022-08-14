@@ -2,7 +2,9 @@
 % Please edit documentation in R/algorithms.R
 \name{getNOTIntervals}
 \alias{getNOTIntervals}
-\title{Internal function to generate random intervals for not_cpreg, the main multiple changepoint estimation function in linear regressions as in Algorithm 4}
+\title{Internal function to generate random intervals for not_cpreg, the main 
+multiple changepoint estimation function in linear regressions as in 
+Algorithm 4}
 \usage{
 getNOTIntervals(n, p, no_intervals, delta = 0.1)
 }
@@ -13,8 +15,11 @@ getNOTIntervals(n, p, no_intervals, delta = 0.1)
 
 \item{no_intervals}{the desired number of intervals}
 
-\item{delta}{only intervals with length longer than (1+delta) * p will be kept}
+\item{delta}{only intervals with length longer than (1+delta) * p will be 
+kept}
 }
 \description{
-Internal function to generate random intervals for not_cpreg, the main multiple changepoint estimation function in linear regressions as in Algorithm 4
+Internal function to generate random intervals for not_cpreg, the main 
+multiple changepoint estimation function in linear regressions as in 
+Algorithm 4
 }

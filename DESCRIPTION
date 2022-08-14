@@ -8,7 +8,8 @@ Authors@R: c(person("Fengnan", "Gao", email = "fngao@fudan.edu.cn",
             person("Tengyao", "Wang", email="t.wang59@lse.ac.uk", 
                   role=c("aut", "cre")))
 Imports: glmnet, MASS, RSpectra, evd
-Description: Sparse change localization of high-dimensional linear regression coefficients
+Description: Sparse change localization of high-dimensional linear regression 
+coefficients with charcoal (via complementary sketching)
 License: `use_gpl3_license()`
 Encoding: UTF-8
 RoxygenNote: 7.2.1

@@ -1,70 +1,6 @@
 library(glmnet)
 library(RSpectra)
 
-
-
-#' Soft thresholding a vector
-#' @param x a vector of real numbers
-#' @param lambda soft thresholding value
-#' @return a vector of the same length
-#' @description entries of v are moved towards 0 by the amount lambda until they hit 0.
-vector.soft.thresh <- function(x, lambda){
-  sign(x)*pmax(0,(abs(x)-lambda))
-}
-
-
-#' Compute matrix power of a symmetric matrix
-#' @param A a square matrix
-#' @param power power exponent
-#' @param pseudoinverse whether to use pseudoinverse if power is negative
-matrix.power <- function(A, power, pseudoinverse=TRUE){
-  if (nrow(A)!=ncol(A)) stop('A need to be a square matrix.')
-  symm <- isSymmetric(A)
-  tmp <- eigen(A, symmetric=symm)
-  evecs <- tmp$vectors
-  evals <- tmp$values
-  evals[abs(evals) < 1e-12] <- 0
-  
-  if (sum(evals==0) > 0 && power < 0){
-    if (!pseudoinverse){
-      stop()
-    } else {
-      power <- -power
-      evals[evals!=0] <- 1/evals[evals!=0]
-    }
-  }
-  
-  if (symm && min(Re(evals)) >=0) {
-    return(evecs %*% diag(evals^power, nrow=nrow(A)) %*% t(evecs))
-  } else {
-    return(evecs %*% diag(as.complex(evals)^power, nrow=nrow(A)) %*% t(evecs))
-  }
-}
-
-#' Print percentage
-#' @param ind a vector of for loop interator
-#' @param tot a vector of for loop lengths
-#' @return on screen output of percentage
-printPercentage <- function (ind, tot){
-  ind <- as.vector(ind); tot <- as.vector(tot)
-  if ((length(tot) > 1) & (length(ind) == 1)) {ind <- match(ind, tot); tot <- length(tot)}
-  len <- length(ind)
-  contrib <- rep(1,len)
-  if (len > 1) {
-    for (i in (len-1):1) contrib[i] <- contrib[i+1] * tot[i+1]
-  }
-  grand_tot <- contrib[1] * tot[1]
-  count <- (sum(contrib * (ind - 1)) + 1)
-  out <- ""
-  if (sum(ind-1)>0) out <- paste0(rep("\b", nchar(round((count-1)/grand_tot * 100))+1), collapse = "")
-  out <- paste0(out, round(count/grand_tot*100), "%")
-  if (identical(ind, tot)) out <- paste0(out, '\n')
-  cat(out)
-  return(NULL)
-}
-
-
-
 #' Computing the orthonormal matrix spanning the orthogonal complement of the column span of X
 #' @param X an n x p matrix with n > p
 #' @return matrix A of size n x (n-p) with orthonormal columns
@@ -106,9 +42,6 @@ dicker_noise_sd <- function(W, z)
     return(sqrt(sigma.tilde.square))
   } else return(noise_sd(W,z))
 }
-
-
-
 
 
 #' Main function implementing the charcoal algorithms for single changepoints

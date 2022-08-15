@@ -48,7 +48,7 @@ standard normal errors;"t4" for t distribution with degree of freedom 4
 (4 can be replaced by any desired df, and if unspecified, df of 4 is 
 applied); "exp" the centered exponential distribution; "laplace" for 
 standardized Laplace distribution with zero mean and std 1; and "rademacher" 
-for all errors of being independent fair coin toss between {-1,1}}
+for all errors of being independent fair coin tosses between {-1,1}}
 
 \item{sigma}{the regression noise level, uniform among all time points}
 

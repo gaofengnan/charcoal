@@ -38,12 +38,12 @@ regression coefficients, which follows N(0,b^2)}
 console}
 }
 \value{
-a nonnegative scalar as the threshold for not_cpreg
+a nonnegative scalar as the threshold for `not_cpreg`
 }
 \description{
 Generate the threshold for combining charcoal with the 
 narrowest-over-threshold algorithm, which is also used as the critical 
-threshold in the testing refining stage in not_cpreg.  It works by generating
- permSize Monte Carlo repetitions of running cpreg on the null model without 
+threshold in the testing refining stage in `not_cpreg`.  It works by generating
+ permSize Monte Carlo repetitions of running `cpreg` on the null model without 
  any change in regression coefficients
 }

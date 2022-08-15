@@ -2,7 +2,7 @@
 % Please edit documentation in R/algorithms.R
 \name{getNOTIntervals}
 \alias{getNOTIntervals}
-\title{Internal function to generate random intervals for not_cpreg, the main 
+\title{Internal function to generate random intervals for `not_cpreg`, the main 
 multiple changepoint estimation function in linear regressions as in 
 Algorithm 4}
 \usage{
@@ -19,7 +19,7 @@ getNOTIntervals(n, p, no_intervals, delta = 0.1)
 kept}
 }
 \description{
-Internal function to generate random intervals for not_cpreg, the main 
+Internal function to generate random intervals for `not_cpreg`, the main 
 multiple changepoint estimation function in linear regressions as in 
 Algorithm 4
 }

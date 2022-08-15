@@ -26,7 +26,7 @@ critical value in the testing refinement stage}
 
 \item{no_intervals}{number of intervals for the narrowest-over-threshold part}
 
-\item{burnIn}{the burnIn parameter to be passed to cpreg in both the NOT and 
+\item{burnIn}{the burnIn parameter to be passed to `cpreg` in both the NOT and 
 refinements, which specifies the fraction at both ends of the interval to be 
 discarded as possible changes, to handle common boundary effects.}
 

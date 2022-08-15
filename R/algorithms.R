@@ -8,8 +8,8 @@ library(stringr)
 #' @param x a vector of real numbers
 #' @param lambda soft thresholding value
 #' @return a vector of the same length
-#' @description entries of v are moved towards 0 by the amount lambda until 
-#' they hit 0. From github.com/wangtengyao/putils.
+#' @description entries of `x` are moved towards 0 by the amount lambda until 
+#' they hit 0. From `github.com/wangtengyao/putils`.
 #' @export
 vector.soft.thresh <- function(x, lambda){
   sign(x)*pmax(0,(abs(x)-lambda))
@@ -19,8 +19,8 @@ vector.soft.thresh <- function(x, lambda){
 #' @param x a vector of real numbers
 #' @param lambda hard thresholding value
 #' @return a vector of the same length
-#' @description entries of v that are below lambda are set to 0. 
-#' From github.com/wangtengyao/putils.
+#' @description entries of `x` that are below lambda are set to 0. 
+#' From `github.com/wangtengyao/putils`.
 #' @export
 vector.hard.thresh <- function(x, lambda){
   x[abs(x)<lambda] <- 0; x
@@ -67,7 +67,7 @@ orthogonalProjection <- function(X){
 #' (4 can be replaced by any desired df, and if unspecified, df of 4 is 
 #' applied); "exp" the centered exponential distribution; "laplace" for 
 #' standardized Laplace distribution with zero mean and std 1; and "rademacher" 
-#' for all errors of being independent fair coin toss between {-1,1}
+#' for all errors of being independent fair coin tosses between {-1,1}
 #' @param seed the random seed for the ensuing random interval generation for 
 #' the narrowest-over-threshold. The default is NULL, where no seed is set.
 #' @param sigma the regression noise level, uniform among all time points
@@ -189,7 +189,7 @@ dicker_noise_sd <- function(W, z)
 }
 
 
-#' Internal function to generate random intervals for not_cpreg, the main 
+#' Internal function to generate random intervals for `not_cpreg`, the main 
 #' multiple changepoint estimation function in linear regressions as in 
 #' Algorithm 4
 #' @param n the sample size in question
@@ -219,11 +219,11 @@ getNOTIntervals <- function(n, p, no_intervals, delta=0.1){
 #' @param verbose whether to output intermediate results/progress bar in the 
 #' console
 #' @param permSize the number of Monte Carlo repetitions to obtain the threshold
-#' @return a nonnegative scalar as the threshold for not_cpreg
+#' @return a nonnegative scalar as the threshold for `not_cpreg`
 #' @description Generate the threshold for combining charcoal with the 
 #' narrowest-over-threshold algorithm, which is also used as the critical 
-#' threshold in the testing refining stage in not_cpreg.  It works by generating
-#'  permSize Monte Carlo repetitions of running cpreg on the null model without 
+#' threshold in the testing refining stage in `not_cpreg`.  It works by generating
+#'  permSize Monte Carlo repetitions of running `cpreg` on the null model without 
 #'  any change in regression coefficients
 #' @export
 getTestThreshold <- function(n, p, burnIn=0, alpha=0.05, permSize=1000, sigma=1,
@@ -393,7 +393,7 @@ cpreg <- function(X, Y, lambda=NA, sigma=NULL, burnIn=0,
 #' for Algorithm 2, and to 'lasso_bic' for Algorithm 3. The default is 
 #' 'lasso_bic'. The variant employed in the NOT stage is always 'proj' in the 
 #' current implementation.
-#' @param burnIn the burnIn parameter to be passed to cpreg in both the NOT and 
+#' @param burnIn the burnIn parameter to be passed to `cpreg` in both the NOT and 
 #' refinements, which specifies the fraction at both ends of the interval to be 
 #' discarded as possible changes, to handle common boundary effects.
 #' @param verbose whether to output intermediate results/progress bar in the 

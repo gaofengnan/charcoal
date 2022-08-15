@@ -21,4 +21,4 @@ In `./R/` and `./man/` folders. Can be installed via `devtools::install_github('
 ## Reference
 
 [^1]: Gao, F. and Wang, T. (2022) Sparse changepoint detection in 
-high-dimensional linear regression. _arXiv preprint_, [arXiv:2208.06326](https://arxiv.org/abs/2208.06326).
+high-dimensional linear regression. *arXiv preprint*, [arXiv:2208.06326](https://arxiv.org/abs/2208.06326).

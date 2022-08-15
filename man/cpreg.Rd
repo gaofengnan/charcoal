@@ -19,30 +19,30 @@ cpreg(
 
 \item{Y}{response vector of the linear regression model}
 
-\item{lambda}{threshold for Algorithms 1 and 2, set it to NULL and the 
+\item{lambda}{threshold for Algorithms 1 and 2, set it to NULL and the
 recommended value is applied}
 
-\item{sigma}{noise standard deviation of the regression models; if unknown, 
+\item{sigma}{noise standard deviation of the regression models; if unknown,
 set to NULL.}
 
-\item{burnIn}{specifies the fraction at both ends of the interval to be 
+\item{burnIn}{specifies the fraction at both ends of the interval to be
 discarded as possible changes, to handle common boundary effects}
 
-\item{aggregate_method}{specifies which variant of the algorithms to be 
-applied. Set it to 'compsket' for Algorithm 1, to 'proj' for Algorithm 2, 
+\item{aggregate_method}{specifies which variant of the algorithms to be
+applied. Set it to 'compsket' for Algorithm 1, to 'proj' for Algorithm 2,
 and to 'lasso_bic' for Algorithm 3.}
 
-\item{verbose}{whether to output intermidate results/progress bar in the 
+\item{verbose}{whether to output intermidate results/progress bar in the
 console}
 }
 \value{
 a list containing the test statistics and changepoint estimate.
 }
 \description{
-From the model y_t = x_t beta_1 + eps_t for 1<=t<=z and 
-y_t = x_t beta_2 + eps_t for z+1<=t<=n, where x_t are p-dimensional design 
-vectors for 1<=t<=n, we estimate the changepoint z where the change of 
-regression coefficient takes place. The localization is performed using the 
+From the model y_t = x_t beta_1 + eps_t for 1<=t<=z and
+y_t = x_t beta_2 + eps_t for z+1<=t<=n, where x_t are p-dimensional design
+vectors for 1<=t<=n, we estimate the changepoint z where the change of
+regression coefficient takes place. The localization is performed using the
 charcoal algorithms from Gao and Wang (2022). The implementation includes
 Algorithms 1, 2 and 3.
 }
@@ -75,6 +75,6 @@ result <- cpreg(X,Y)
 ret <- simulateMultiCP(n,z/n,p,k,rho,sigma=1); X <- ret$X; Y <- ret$Y
 }
 \references{
-Gao, F. and Wang, T. (2022) Sparse change detection in 
+Gao, F. and Wang, T. (2022) Sparse change detection in
 high-dimensional linear regression.
 }

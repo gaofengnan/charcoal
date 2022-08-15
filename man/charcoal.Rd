@@ -4,7 +4,9 @@
 \name{charcoal}
 \alias{charcoal}
 \title{charcoal: A package for changepoint localization in high-dimensional linear 
-regression
+regression}
+\description{
 The charcoal package collects the implementation for the novel methodology
 'charcoal' for changepoint localization in high-dimensional linear
-regression, introduced in Gao and Wang (2022).}
+regression, introduced in Gao and Wang (2022).
+}

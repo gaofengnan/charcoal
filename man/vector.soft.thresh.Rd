@@ -15,6 +15,6 @@ vector.soft.thresh(x, lambda)
 a vector of the same length
 }
 \description{
-entries of `x` are moved towards 0 by the amount lambda until 
+entries of `x` are moved towards 0 by the amount lambda until
 they hit 0. From `github.com/wangtengyao/putils`.
 }

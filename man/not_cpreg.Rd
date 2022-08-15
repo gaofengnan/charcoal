@@ -21,44 +21,44 @@ not_cpreg(
 
 \item{Y}{response vector of the linear regression model}
 
-\item{thresh}{the threshold for the narrowest-over-threshold, and the 
+\item{thresh}{the threshold for the narrowest-over-threshold, and the
 critical value in the testing refinement stage}
 
 \item{no_intervals}{number of intervals for the narrowest-over-threshold part}
 
-\item{burnIn}{the burnIn parameter to be passed to `cpreg` in both the NOT and 
-refinements, which specifies the fraction at both ends of the interval to be 
+\item{burnIn}{the burnIn parameter to be passed to `cpreg` in both the NOT and
+refinements, which specifies the fraction at both ends of the interval to be
 discarded as possible changes, to handle common boundary effects.}
 
-\item{sigma}{noise standard deviation of the regression models (must be 
+\item{sigma}{noise standard deviation of the regression models (must be
 supplied)}
 
-\item{verbose}{whether to output intermediate results/progress bar in the 
+\item{verbose}{whether to output intermediate results/progress bar in the
 console}
 
-\item{cpreg_method}{specifies which variant of the algorithms to be applied 
-in the refinement stage. Set it to 'compsket' for Algorithm 1, to 'proj' 
-for Algorithm 2, and to 'lasso_bic' for Algorithm 3. The default is 
-'lasso_bic'. The variant employed in the NOT stage is always 'proj' in the 
+\item{cpreg_method}{specifies which variant of the algorithms to be applied
+in the refinement stage. Set it to 'compsket' for Algorithm 1, to 'proj'
+for Algorithm 2, and to 'lasso_bic' for Algorithm 3. The default is
+'lasso_bic'. The variant employed in the NOT stage is always 'proj' in the
 current implementation.}
 
-\item{seed}{the random seed for the ensuing random interval generation for 
+\item{seed}{the random seed for the ensuing random interval generation for
 the narrowest-over-threshold. The default is NULL, where no seed is set.}
 }
 \value{
-a list containing the initial changepoint estimates before the 
-testing refinement, the intermediate estimates after the testing refinement, 
-the intermediate estimates after the midpoint refinement and the estimates 
+a list containing the initial changepoint estimates before the
+testing refinement, the intermediate estimates after the testing refinement,
+the intermediate estimates after the midpoint refinement and the estimates
 after the final refinement.
 }
 \description{
-From the model y_t = x_t beta_t + eps_t for 1<=t<=z with 
-beta_t = beta^i for z_(i-1) < t <= z_i, for 1 <= i <= nu + 1, where x_t 
-are p-dimensional design vectors for 1<=t<=n, nu is the number of 
-changepoints and z_i is the i-th changepoint with the convention z_0 = 0 
-and z_(nu+1) = n.  We estimate the changepoints z_i's where the changes of 
-regression coefficient take place by charcoal. The implementation contains 
-Algorithm 4 and the post-processing discussed in the numerical section of 
+From the model y_t = x_t beta_t + eps_t for 1<=t<=z with
+beta_t = beta^i for z_(i-1) < t <= z_i, for 1 <= i <= nu + 1, where x_t
+are p-dimensional design vectors for 1<=t<=n, nu is the number of
+changepoints and z_i is the i-th changepoint with the convention z_0 = 0
+and z_(nu+1) = n.  We estimate the changepoints z_i's where the changes of
+regression coefficient take place by charcoal. The implementation contains
+Algorithm 4 and the post-processing discussed in the numerical section of
 Gao and Wang (2022).
 }
 \examples{
@@ -66,23 +66,23 @@ Gao and Wang (2022).
 n <- 240 # total sample size
 tau <- c(0.3,0.55)  # changepoint location
 p <- 80 # dimension of covariates
-k <- c(3,10) # sparsity of the vector of difference of the regression 
+k <- c(3,10) # sparsity of the vector of difference of the regression
 coefficients
 rho <- 1.5 # difference in l_2 norm of the two regression coefficients
-# generate the design matrix and response vector of the linear regression 
-sample with multiple changepoints
+# generate the design matrix and response vector of the linear regression
+# sample with multiple changepoints
 ret <- simulateMultiCP(n,tau,p,k,rho,sigma=1)
 X <- ret$X; Y <- ret$Y
-not_result <- not_cpreg(X,Y, Thresh=10)
-# or  not_result <- cpreg(X,Y,Thresh=NULL,no_intervals=200,burnIn=0.05,
-cpreg_method='proj')
+not_result <- not_cpreg(X,Y, thresh=10)
+# or  not_result <- cpreg(X,Y,thresh=NULL,no_intervals=200,burnIn=0.05,
+#                         cpreg_method='proj')
 }
 \references{
-Gao, F. and Wang, T. (2022) Sparse change detection in 
+Gao, F. and Wang, T. (2022) Sparse change detection in
 high-dimensional regression.
 
 Baranowski, R., Chen, Y., & Fryzlewicz, P. (2019).
- Narrowest‐over‐threshold detection of multiple change points and 
- change‐point‐like features. Journal of the Royal Statistical Society: 
+ Narrowest‐over‐threshold detection of multiple change points and
+ change‐point‐like features. Journal of the Royal Statistical Society:
  Series B (Statistical Methodology), 81(3), 649-672.
 }

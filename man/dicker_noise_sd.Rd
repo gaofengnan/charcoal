@@ -15,12 +15,12 @@ dicker_noise_sd(W, z)
 a nonnegative scalar of estimated noise standard deviation
 }
 \description{
-Assume data are generated from the model z = W b + e, where e 
-has independent components N(0, s^2), we estimate s^2 by using the method 
-in Dicker (2014).  If the method fails, a fallback with nosie_sd will be 
+Assume data are generated from the model z = W b + e, where e
+has independent components N(0, s^2), we estimate s^2 by using the method
+in Dicker (2014).  If the method fails, a fallback with nosie_sd will be
 used.
 }
 \references{
-Dicker, L. H. (2014). Variance estimation in high-dimensional 
+Dicker, L. H. (2014). Variance estimation in high-dimensional
 linear models. Biometrika, 101(2), 269-284.
 }

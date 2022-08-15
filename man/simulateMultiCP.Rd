@@ -24,6 +24,8 @@ simulateMultiCP(
 changepoints in fraction. If tau = c(0.1,0.2), the changes takes place at 
 0.1n and 0.2n}
 
+\item{p}{the dimension of regression coefficients}
+
 \item{k}{a vector containing the sparsity of each vector of change, if k is 
 of length 1, then the same sparsity is applied to all change vectors. E.g., 
 k = c(3,5), the first change vector is 3-sparse and the second 5-sparse}

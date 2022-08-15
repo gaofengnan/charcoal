@@ -2,6 +2,7 @@ library(glmnet)
 library(MASS)
 library(RSpectra)
 library(evd)
+library(stringr)
 
 #' Soft thresholding a vector
 #' @param x a vector of real numbers
@@ -46,6 +47,7 @@ orthogonalProjection <- function(X){
 #' @param tau a number (in case of single changepoint) or vector containing all
 #' changepoints in fraction. If tau = c(0.1,0.2), the changes takes place at 
 #' 0.1n and 0.2n
+#' @param p the dimension of regression coefficients
 #' @param k a vector containing the sparsity of each vector of change, if k is 
 #' of length 1, then the same sparsity is applied to all change vectors. E.g., 
 #' k = c(3,5), the first change vector is 3-sparse and the second 5-sparse
@@ -216,6 +218,7 @@ getNOTIntervals <- function(n, p, no_intervals, delta=0.1){
 #' regression coefficients, which follows N(0,b^2)
 #' @param verbose whether to output intermediate results/progress bar in the 
 #' console
+#' @param permSize the number of Monte Carlo repetitions to obtain the threshold
 #' @return a nonnegative scalar as the threshold for not_cpreg
 #' @description Generate the threshold for combining charcoal with the 
 #' narrowest-over-threshold algorithm, which is also used as the critical 
@@ -383,7 +386,7 @@ cpreg <- function(X, Y, lambda=NA, sigma=NULL, burnIn=0,
 #' @param no_intervals number of intervals for the narrowest-over-threshold part
 #' @param seed the random seed for the ensuing random interval generation for 
 #' the narrowest-over-threshold. The default is NULL, where no seed is set.
-#' @param Thresh the threshold for the narrowest-over-threshold, and the 
+#' @param thresh the threshold for the narrowest-over-threshold, and the 
 #' critical value in the testing refinement stage
 #' @param cpreg_method specifies which variant of the algorithms to be applied 
 #' in the refinement stage. Set it to 'compsket' for Algorithm 1, to 'proj' 

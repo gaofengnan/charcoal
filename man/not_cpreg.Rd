@@ -21,6 +21,9 @@ not_cpreg(
 
 \item{Y}{response vector of the linear regression model}
 
+\item{thresh}{the threshold for the narrowest-over-threshold, and the 
+critical value in the testing refinement stage}
+
 \item{no_intervals}{number of intervals for the narrowest-over-threshold part}
 
 \item{burnIn}{the burnIn parameter to be passed to cpreg in both the NOT and 
@@ -41,9 +44,6 @@ current implementation.}
 
 \item{seed}{the random seed for the ensuing random interval generation for 
 the narrowest-over-threshold. The default is NULL, where no seed is set.}
-
-\item{Thresh}{the threshold for the narrowest-over-threshold, and the 
-critical value in the testing refinement stage}
 }
 \value{
 a list containing the initial changepoint estimates before the 

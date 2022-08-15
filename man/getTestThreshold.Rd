@@ -27,6 +27,8 @@ getTestThreshold(
 practice adjusted for the multiple testing, i.e., in this case the number 
 of intervals}
 
+\item{permSize}{the number of Monte Carlo repetitions to obtain the threshold}
+
 \item{sigma}{the standard deviation of the noise in the regressions}
 
 \item{b}{the standard deviation of each entry of the randomly generated 

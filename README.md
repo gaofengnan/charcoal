@@ -1,5 +1,4 @@
-# charcoal - A novel methodology of changepoint localization in high-dimensional
-linear regression
+# charcoal - A changepoint detection algorithm in high-dimensional linear regression
 
 (By [Fengnan Gao](https://gaofn.xyz/ "Fengnan's Homepage") and [Tengyao
 Wang](https://personal.lse.ac.uk/wangt60/ "Tengyao's Homepage"))

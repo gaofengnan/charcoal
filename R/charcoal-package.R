@@ -1,5 +1,6 @@
-#' charcoal: A package for localizing changepoints in high-dimensional linear 
-#' regression via complementary sketching
+#' charcoal: An R package implementing the charcoal algorithms for localizing
+#' changepoints in high-dimensional linear regression (via complementary
+#' sketching)
 #' 
 #'
 #' @docType package

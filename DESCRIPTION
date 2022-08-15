@@ -8,8 +8,9 @@ Authors@R: c(person("Fengnan", "Gao", email = "fngao@fudan.edu.cn",
             person("Tengyao", "Wang", email="t.wang59@lse.ac.uk", 
                   role=c("aut", "cre")))
 Imports: glmnet, MASS, RSpectra, evd, stringr
-Description: Sparse change localization of high-dimensional linear regression 
-              coefficients with charcoal (via complementary sketching)
-License: `use_gpl3_license()`
+Description: The package implements charcoal, a novel methodology to localize 
+             sparse change of high-dimensional linear regression coefficients 
+             (via complementary sketching).
+License: GPL (>= 3) + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.2.1

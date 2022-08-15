@@ -8,7 +8,10 @@
 #' @description The charcoal package collects the implementation for the novel methodology
 #' 'charcoal' for changepoint localization in high-dimensional linear
 #' regression, introduced in Gao and Wang (2022).
+#' @references Gao, F. and Wang, T. (2022) Sparse change detection in
+#' high-dimensional regression.
 #' @importFrom evd fgev qgev
 #' @importFrom RSpectra svds
 #' @importFrom MASS mvrnorm
+#' @importFrom stats rt rnorm mad predict quantile rbinom rexp rt setNames coef
 NULL

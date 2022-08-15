@@ -1,15 +1,15 @@
-#' charcoal: A package for changepoint localization in high-dimensional linear 
-#' regression
+#' charcoal: A package for localizing changepoints in high-dimensional linear 
+#' regression via complementary sketching
 #' 
 #'
 #' @docType package
 #' @name charcoal
 #'
-#' @description The charcoal package collects the implementation for the novel methodology
-#' 'charcoal' for changepoint localization in high-dimensional linear
-#' regression, introduced in Gao and Wang (2022).
+#' @description The charcoal package collects the implementation for the novel 
+#' methodology #' 'charcoal' for changepoint localization in high-dimensional 
+#' linear regression, introduced in Gao and Wang (2022).
 #' @references Gao, F. and Wang, T. (2022) Sparse change detection in
-#' high-dimensional regression.
+#' high-dimensional regression. arXiv preprint, arXiv:2208.06326.
 #' @importFrom evd fgev qgev
 #' @importFrom RSpectra svds
 #' @importFrom MASS mvrnorm

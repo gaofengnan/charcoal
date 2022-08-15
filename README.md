@@ -10,7 +10,7 @@ regression coefficients, where the regression coefficients need not be
 individually sparse.
 
 Including Algorithms 1, 2, 3 and 4 from Gao and Wang (2022).[^1]  
-A function to generate linear  regression samples with (multiple) changepoint
+A function to generate linear regression samples with (multiple) changepoint
 is also provided.
 
 ## Description of files
@@ -22,4 +22,4 @@ In `./R/` and `./man/` folders. Can be installed via `devtools::install_github('
 ## Reference
 
 [^1]: Gao, F. and Wang, T. (2022) Sparse changepoint detection in 
-high-dimensional linear regression. _arXiv preporint_, arXiv:2208.06326.
+high-dimensional linear regression. _arXiv preprint_, arXiv:2208.06326.

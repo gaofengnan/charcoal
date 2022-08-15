@@ -1,4 +1,5 @@
 # ignore the .Rhistory file
 .Rhistory
 .Rdata
+.Rbuildignore
 

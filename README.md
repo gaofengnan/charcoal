@@ -3,14 +3,10 @@
 (By [Fengnan Gao](https://gaofn.xyz/ "Fengnan's Homepage") and [Tengyao
 Wang](https://personal.lse.ac.uk/wangt60/ "Tengyao's Homepage"))
 
-Implementation of the changepoint localization methods via the complementary 
-sketching algorithm (collectively named 'charcoal') for high-dimensional 
-regression coefficients, where the regression coefficients need not be 
-individually sparse.
+Implementation of the changepoint localization methods via the complementary sketching algorithm (collectively named '**charcoal**') for high-dimensional regression coefficients, where the regression coefficients need not be individually sparse.
 
-Including Algorithms 1, 2, 3 and 4 from Gao and Wang (2022).[^1]  
-A function to generate linear regression samples with (multiple) changepoint
-is also provided.
+* Including Algorithms 1, 2, 3 and 4 from Gao and Wang (2022).[^1]  
+* A function to generate linear regression samples with (multiple) changepoint(s) is also provided.
 
 ## Description of files
 

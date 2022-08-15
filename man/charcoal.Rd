@@ -3,8 +3,9 @@
 \docType{package}
 \name{charcoal}
 \alias{charcoal}
-\title{charcoal: A package for localizing changepoints in high-dimensional linear 
-regression via complementary sketching}
+\title{charcoal: An R package implementing the charcoal algorithms for localizing
+changepoints in high-dimensional linear regression (via complementary
+sketching)}
 \description{
 The charcoal package collects the implementation for the novel 
 methodology #' 'charcoal' for changepoint localization in high-dimensional 

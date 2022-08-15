@@ -11,6 +11,6 @@ Imports: glmnet, MASS, RSpectra, evd, stringr
 Description: The package implements charcoal, a novel methodology to localize 
              sparse change of high-dimensional linear regression coefficients 
              (via complementary sketching).
-License: GPL (>= 3) + file LICENSE
+License: GPL (>= 3)
 Encoding: UTF-8
 RoxygenNote: 7.2.1

@@ -229,10 +229,7 @@ getNOTIntervals <- function(n, p, no_intervals, delta=0.1){
 #' @export
 getTestThreshold <- function(n, p, burnIn=0, alpha=0.05, permSize=1000, sigma=1,
                              b=1, verbose=FALSE) {
-  # sigma --- regression noise level
-  # b --- baseline regression coefficient magnitude level
-
-  # n <- nrow(X); p <-ncol(X)
+  
   cpreg_stats <- rep(-Inf, permSize)
   for (i in 1:permSize) {
     X <- matrix(rnorm(n*p), nrow=n)

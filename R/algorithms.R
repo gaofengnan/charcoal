@@ -263,7 +263,7 @@ getTestThreshold <- function(n, p, burnIn=0, alpha=0.05, permSize=1000, sigma=1,
 #' and to 'lasso_bic' for Algorithm 3.
 #' @param burnIn specifies the fraction at both ends of the interval to be
 #' discarded as possible changes, to handle common boundary effects
-#' @param verbose whether to output intermidate results/progress bar in the
+#' @param verbose whether to output intermediate results/progress bar in the
 #' console
 #' @return a list containing the test statistics and changepoint estimate.
 #' @description From the model y_t = x_t beta_1 + eps_t for 1<=t<=z and

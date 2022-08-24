@@ -79,7 +79,7 @@ not_result <- not_cpreg(X,Y, thresh=10)
 }
 \references{
 Gao, F. and Wang, T. (2022) Sparse change detection in
-high-dimensional regression.
+high-dimensional linear regression.
 
 Baranowski, R., Chen, Y., & Fryzlewicz, P. (2019).
  Narrowest‐over‐threshold detection of multiple change points and

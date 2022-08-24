@@ -409,7 +409,7 @@ cpreg <- function(X, Y, lambda=NA, sigma=NULL, burnIn=0,
 #' Algorithm 4 and the post-processing discussed in the numerical section of
 #' Gao and Wang (2022).
 #' @references Gao, F. and Wang, T. (2022) Sparse change detection in
-#' high-dimensional regression.
+#' high-dimensional linear regression.
 #' @references Baranowski, R., Chen, Y., & Fryzlewicz, P. (2019).
 #'  Narrowest‐over‐threshold detection of multiple change points and
 #'  change‐point‐like features. Journal of the Royal Statistical Society:

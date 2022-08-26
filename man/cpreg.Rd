@@ -32,7 +32,7 @@ discarded as possible changes, to handle common boundary effects}
 applied. Set it to 'compsket' for Algorithm 1, to 'proj' for Algorithm 2,
 and to 'lasso_bic' for Algorithm 3.}
 
-\item{verbose}{whether to output intermidate results/progress bar in the
+\item{verbose}{whether to output intermediate results/progress bar in the
 console}
 }
 \value{

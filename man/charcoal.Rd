@@ -13,5 +13,5 @@ linear regression, introduced in Gao and Wang (2022).
 }
 \references{
 Gao, F. and Wang, T. (2022) Sparse change detection in
-high-dimensional regression. arXiv preprint, arXiv:2208.06326.
+high-dimensional linear regression. arXiv preprint, arXiv:2208.06326.
 }

@@ -14,5 +14,5 @@ Implementation of the changepoint localization methods via the complementary ske
 
 In `./R/` and `./man/` folders. Can be installed via `devtools::install_github('gaofengnan/charcoal')` in `R`.
 
-[^1]: Gao, F. and Wang, T. (2022) Sparse changepoint detection in 
+[^1]: Gao, F. and Wang, T. (2022) Sparse change detection in 
 high-dimensional linear regression. *arXiv preprint*, [arXiv:2208.06326](https://arxiv.org/abs/2208.06326).

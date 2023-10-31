@@ -10,6 +10,8 @@ Implementation of the changepoint localization methods via the complementary ske
 
 ## Description of files
 
+* The folder *singlecell* contains the real data example in the paper.
+
 ### R package
 
 In `./R/` and `./man/` folders. Can be installed via `devtools::install_github('gaofengnan/charcoal')` in `R`.

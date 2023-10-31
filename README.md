@@ -10,7 +10,7 @@ Implementation of the changepoint localization methods via the complementary ske
 
 ## Description of files
 
-* The folder *singlecell* contains the real data example in the paper.
+* The folder `singlecell` contains the real data example in the paper.
 
 ### R package
 
